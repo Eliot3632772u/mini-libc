@@ -1,12 +1,10 @@
 # mini-libc
 
-# libft
-
-*This project has been created as part of the 42 curriculum by [your_login].*
+*This project has been created as part of the 42 curriculum*
 
 ## Description
 
-**libft** is the first project in the 42 curriculum and serves as a foundation for all future projects. The goal is to recreate a personal C library by reimplementing essential functions from the standard C library (libc), along with additional utility functions that will prove useful throughout the curriculum.
+**mini-libc or libft** is the first project in the 42 curriculum and serves as a foundation for all future projects. The goal is to recreate a personal C library by reimplementing essential functions from the standard C library (libc), along with additional utility functions that will prove useful throughout the curriculum.
 
 This project deepens understanding of basic algorithms, data structures, memory management, and proper C programming practices. By building this library from scratch, you gain intimate knowledge of how fundamental functions work under the hood.
 
@@ -35,6 +33,17 @@ This will generate the `libft.a` static library file.
 - `make clean` - Removes object files (.o)
 - `make fclean` - Removes object files and the library (libft.a)
 - `make re` - Rebuilds the entire library from scratch
+- `make bonus` - Compiles the bonus functions (linked list functions)
+
+### Testing
+
+To compile and run the test suite:
+
+```bash
+make run
+```
+
+This will compile the library with the test file (main.c) and execute all tests for every function.
 
 ### Usage in Your Projects
 
@@ -47,7 +56,7 @@ To use libft in your projects:
 
 2. Compile your project with the library:
 ```bash
-gcc -Wall -Wextra -Werror your_file.c -L. -lft -o your_program
+cc -Wall -Wextra -Werror your_file.c libft.a -o your_program
 ```
 
 ### Compilation Flags
@@ -149,16 +158,9 @@ typedef struct s_list
 - [Linked Lists in C](https://www.learn-c.org/en/Linked_lists)
 - [Makefile Tutorial](https://makefiletutorial.com/)
 
-### AI Usage
-AI tools were used for:
-- **Documentation**: Generating clear comments and function descriptions
-- **Code Review**: Identifying potential bugs and memory leaks
-- **Testing Strategy**: Suggesting edge cases and test scenarios
-- **Optimization**: Reviewing algorithmic efficiency of implementations
-
-No AI-generated code was directly used in the final implementation. All functions were written manually to ensure deep understanding of the underlying concepts.
-
----
+### Youtube Channels
+- [Portfolio Courses](https://youtube.com/playlist?list=PLA1FTfKBAEX4hblYoH6mnq0zsie2w6Wif&si=2dxzWnVUh_MWok_I)
+- [CodeVault](https://youtube.com/playlist?list=PLfqABt5AS4FmErobw8YyTwXDUE5nPH5lH&si=lmhJyDpfqQnZSsR2)
 
 ## Technical Considerations
 
@@ -170,13 +172,3 @@ No AI-generated code was directly used in the final implementation. All function
 - Memory leaks are prevented through careful allocation and deallocation
 
 ---
-
-## Author
-
-Created by [your_login] as part of the 42 School curriculum.
-
----
-
-## License
-
-This project is part of the 42 School curriculum and follows its academic guidelines.

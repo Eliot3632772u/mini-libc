@@ -25,16 +25,20 @@ ${NAME}: ${OBJS}
 all: ${NAME}
 
 %.o : %.c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@
-	${LIBC} ${NAME} $@
+	@ $(CC) $(CFLAGS) -c $< -o $@
+	@ ${LIBC} ${NAME} $@
 
 bonus: ${OBJSB}
 
 clean:
-	${RM} ${OBJS} ${OBJSB}
+	@ ${RM} ${OBJS} ${OBJSB}
+
+run: all bonus
+	@ cc main.c ${NAME}
+	@ ./a.out
 
 fclean: clean
-	${RM} ${NAME} ${bonus}
+	@ ${RM} ${NAME} ${bonus} a.out
 
 re: fclean all
 
